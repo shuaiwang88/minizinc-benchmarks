@@ -17,7 +17,7 @@ array[Actors] of int: c; % cost of each actor
 
 array[Scenes,Actors] of bool: ab; % actors for each scene
 ab = array2d(Scenes,Actors, [  ia[j,i] == 1 | i in Scenes, j in Actors] );
-
+output[show(ab)];
 %-- Decision variables --------------------------------------------------------
 
 array[Scenes] of var Scenes: s; % schedule of scenes
